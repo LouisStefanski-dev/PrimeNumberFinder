@@ -8,7 +8,7 @@ int main() {
 	std::unordered_set<int> primes; //stores prime numbers 
 	for (int i = 1; i < pow(10.0, 100.0); ++i) { // runs from 1-10^100)
 		for (int j = 2; j < i; ++j) { //loops through numbers below the current prime to check if the current (i) is prime.
-			if (i % j != 0) { //i % j with a return value of zero indicates a possible prime number.
+			if (i % j != 0) { //if i % j returns 0 then the value is not prime. As its divisible by another value besides 1 and itself.
 				if (j == (i - 1)) { //checks if loop is at last element in loop. If it is a prime number has been found
 					primes.insert(i);
 					std::cout << "| We found " << (primes.size() + 1) << " prime numbers. | The most recent being: " << i << ". |" <<
